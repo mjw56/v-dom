@@ -1,9 +1,9 @@
 import { h } from './h';
+import { createElement } from './create-element';
 
 export default {
-    h
+  h,
+  createElement
 };
 
-export {
-    h
-};
+export { h, createElement };

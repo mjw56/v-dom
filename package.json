@@ -2,11 +2,20 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "prettier": "^1.8.2",
     "rollup": "^0.51.5",
     "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "serve": "^6.4.1"
+  },
+  "prettier": {
+    "single-quote": true,
+    "tab-width": 2
   },
   "scripts": {
-    "transpile:main": "rollup -c rollup.config.js"
+    "demo": "serve -o ./demo",
+    "format": "prettier --write './src/**/*.js'",
+    "transpile:app": "rollup -c config/rollup.config.app.js",
+    "transpile:main": "rollup -c config/rollup.config.js"
   }
 }
