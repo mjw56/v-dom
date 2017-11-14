@@ -2,6 +2,11 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "expect": "^21.2.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1",
     "prettier": "^1.8.2",
     "rollup": "^0.51.5",
     "rollup-plugin-babel": "^3.0.2",
@@ -15,6 +20,7 @@
   "scripts": {
     "demo": "serve -o ./demo",
     "format": "prettier --write './src/**/*.js'",
+    "test": "mocha",
     "transpile:app": "rollup -c config/rollup.config.app.js",
     "transpile:main": "rollup -c config/rollup.config.js"
   }
