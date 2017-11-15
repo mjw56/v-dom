@@ -7,15 +7,14 @@ export default {
 	output: {
 		format: 'cjs',
 		file: 'demo/bundle.js',
-		// name: 'vdom',
-		sourcemap: true
+		sourcemap: false
 	},
 	plugins: [
 		nodeResolve({
 			main: true
 		}),
 		babel({
-			sourceMap: true,
+			sourceMap: false,
 			exclude: 'node_modules/**',
             babelrc: false,
             plugins: [
