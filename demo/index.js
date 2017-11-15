@@ -1,4 +1,4 @@
-import { h, createElement } from '../src';
+import { h, createElement, updateElement } from '../src';
 
 const app = (
     <ul>
@@ -8,5 +8,17 @@ const app = (
     </ul>
 );
 
+const next = (
+    <ul>
+        <li>one</li>
+        <li>{Math.random()}</li>
+    </ul>
+);
+
 const $root = document.getElementById('root');
 $root.appendChild(createElement(app));
+
+$root.addEventListener('click', () => {
+    updateElement($root, next, app);
+});
+
