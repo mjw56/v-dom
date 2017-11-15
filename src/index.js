@@ -1,9 +1,11 @@
 import { h } from './h';
 import { createElement } from './create-element';
+import { updateElement } from './vdom/diff';
 
 export default {
   h,
-  createElement
+  createElement,
+  updateElement
 };
 
-export { h, createElement };
+export { h, createElement, updateElement };
